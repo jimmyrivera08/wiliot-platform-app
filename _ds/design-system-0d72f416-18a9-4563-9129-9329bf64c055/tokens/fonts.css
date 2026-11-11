@@ -1,0 +1,93 @@
+/* Wiliot brand webfonts — real licensed OTFs (GT America, GT Eesti Display, GT Pressura).
+   Order ref: Wiliot purchased fonts #116949. Keep these in sync with assets/fonts/. */
+
+/* ---- GT America — UI / body (font-sans) ---- */
+@font-face {
+  font-family: "GT America";
+  src: url("/_blob/87c33b88e8fcc00b34b4930ab59d9d65") format("opentype");
+  font-weight: 100; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "GT America";
+  src: url("/_blob/5f896baa17d5af15e70eacd68ebfcbf6") format("opentype");
+  font-weight: 300; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "GT America";
+  src: url("/_blob/ad48bbb935afa5985a87be7fda6c8dbb") format("opentype");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "GT America";
+  src: url("/_blob/3bd72a4ff844528d2044799d6d28e8cd") format("opentype");
+  font-weight: 500; font-style: normal; font-display: swap;
+}
+/* No Bold weight was shipped — 600/700 fall back to Medium metrics. */
+@font-face {
+  font-family: "GT America";
+  src: url("/_blob/3bd72a4ff844528d2044799d6d28e8cd") format("opentype");
+  font-weight: 600 700; font-style: normal; font-display: swap;
+}
+
+/* ---- GT Eesti Display — headings / titles (font-heading) ---- */
+@font-face {
+  font-family: "GT Eesti Display";
+  src: url("/_blob/cb404bfca69cd9a56b3245f3d99a4757") format("opentype");
+  font-weight: 300; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "GT Eesti Display";
+  src: url("/_blob/c033bb159115c89ce04316349d2d0873") format("opentype");
+  font-weight: 500; font-style: normal; font-display: swap;
+}
+/* Display titles render at Medium (heaviest weight provided). */
+@font-face {
+  font-family: "GT Eesti Display";
+  src: url("/_blob/c033bb159115c89ce04316349d2d0873") format("opentype");
+  font-weight: 600 700; font-style: normal; font-display: swap;
+}
+
+/* ---- GT Pressura — data / IDs / technical values (font-data) ---- */@font-face {
+  font-family: "GT Pressura";
+  src: url("/_blob/ad4a7f7643a0d1d6185e7995261e54ff") format("opentype");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "GT Pressura";
+  src: url("/_blob/a57cabc0be139fd039c9e54f97d8ef75") format("opentype");
+  font-weight: 500 700; font-style: normal; font-display: swap;
+}
+
+/* ---- GT Planar — DECKS / PRESENTATIONS ONLY (font-deck-display) ----
+   Use for slide headlines, mostly Regular (400).
+   DO NOT use Planar in the product UI. DO NOT use GT Eesti Display in decks. */
+@font-face {
+  font-family: "GT Planar";
+  src: url("/_blob/66816ce4fa37726ae6e2e9e9e5a9737e") format("opentype");
+  font-weight: 100; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "GT Planar";
+  src: url("/_blob/bcd704d2465c48d515ab685629900a0e") format("opentype");
+  font-weight: 300; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "GT Planar";
+  src: url("/_blob/87d22f35127182034572050ca22f2909") format("opentype");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "GT Planar";
+  src: url("/_blob/bc31ec7b70e0b06c57beb81d6bc1db78") format("opentype");
+  font-weight: 500; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "GT Planar";
+  src: url("/_blob/494e511b9fdda28a45bfba3df3c6c639") format("opentype");
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "GT Planar";
+  src: url("/_blob/6af90664e99b316eb9dce5909ba1c2ce") format("opentype");
+  font-weight: 900; font-style: normal; font-display: swap;
+}

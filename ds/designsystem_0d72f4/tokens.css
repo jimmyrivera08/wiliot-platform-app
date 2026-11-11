@@ -1,0 +1,403 @@
+/* ' design system — generated from tokens.json */
+:root, [data-theme="light"] {
+  --w-white: #ffffff; /* White primitive. Reference through the semantic roles; never use w_ primitives directly in UI. */
+  --w-slate-50: #f8fafc; /* Slate — primary neutral (cool, used for surfaces & text). Surfaces. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-slate-100: #f1f5f9; /* Slate — primary neutral (cool, used for surfaces & text). Primitive: reference through the semantic roles, never directly in UI. */
+  --w-slate-200: #e2e9f0; /* Slate — primary neutral (cool, used for surfaces & text). Borders. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-slate-300: #cbd6e1; /* Slate — primary neutral (cool, used for surfaces & text). Primitive: reference through the semantic roles, never directly in UI. */
+  --w-slate-400: #abbccc; /* Slate — primary neutral (cool, used for surfaces & text). Primitive: reference through the semantic roles, never directly in UI. */
+  --w-slate-500: #8191a1; /* Slate — primary neutral (cool, used for surfaces & text). Primitive: reference through the semantic roles, never directly in UI. */
+  --w-slate-600: #637587; /* Slate — primary neutral (cool, used for surfaces & text). Muted text. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-slate-700: #475869; /* Slate — primary neutral (cool, used for surfaces & text). Primitive: reference through the semantic roles, never directly in UI. */
+  --w-slate-800: #334455; /* Slate — primary neutral (cool, used for surfaces & text). Primitive: reference through the semantic roles, never directly in UI. */
+  --w-slate-900: #1e2d3b; /* Slate — primary neutral (cool, used for surfaces & text). Body text. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-slate-950: #0f1d2a; /* Slate — primary neutral (cool, used for surfaces & text). Strong text & primary CTA. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-slate-1000: #020617; /* Slate — primary neutral (cool, used for surfaces & text). Primitive: reference through the semantic roles, never directly in UI. */
+  --w-natural-50: #fafafa; /* Natural — true-gray neutral (dark surfaces). Primitive: reference through the semantic roles, never directly in UI. */
+  --w-natural-100: #f5f5f5; /* Natural — true-gray neutral (dark surfaces). Primitive: reference through the semantic roles, never directly in UI. */
+  --w-natural-200: #e5e5e5; /* Natural — true-gray neutral (dark surfaces). Primitive: reference through the semantic roles, never directly in UI. */
+  --w-natural-300: #d4d4d4; /* Natural — true-gray neutral (dark surfaces). Primitive: reference through the semantic roles, never directly in UI. */
+  --w-natural-400: #a3a3a3; /* Natural — true-gray neutral (dark surfaces). Primitive: reference through the semantic roles, never directly in UI. */
+  --w-natural-500: #808080; /* Natural — true-gray neutral (dark surfaces). Primitive: reference through the semantic roles, never directly in UI. */
+  --w-natural-600: #666666; /* Natural — true-gray neutral (dark surfaces). Primitive: reference through the semantic roles, never directly in UI. */
+  --w-natural-700: #525252; /* Natural — true-gray neutral (dark surfaces). Primitive: reference through the semantic roles, never directly in UI. */
+  --w-natural-800: #404040; /* Natural — true-gray neutral (dark surfaces). Primitive: reference through the semantic roles, never directly in UI. */
+  --w-natural-900: #262626; /* Natural — true-gray neutral (dark surfaces). Primitive: reference through the semantic roles, never directly in UI. */
+  --w-natural-950: #171717; /* Natural — true-gray neutral (dark surfaces). Primitive: reference through the semantic roles, never directly in UI. */
+  --w-natural-1000: #0a0a0a; /* Natural — true-gray neutral (dark surfaces). Primitive: reference through the semantic roles, never directly in UI. */
+  --w-purple-50: #ede7ff; /* Purple — BRAND accent. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-purple-100: #daccff; /* Purple — BRAND accent. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-purple-200: #b89eff; /* Purple — BRAND accent. IN PROGRESS tag. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-purple-300: #a180ff; /* Purple — BRAND accent. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-purple-400: #8b61ff; /* Purple — BRAND accent. Hover. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-purple-500: #713dff; /* Purple — BRAND accent. Active nav, links, selection. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-purple-600: #4b14e0; /* Purple — BRAND accent. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-purple-700: #4212c5; /* Purple — BRAND accent. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-purple-800: #3711a1; /* Purple — BRAND accent. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-purple-900: #22076e; /* Purple — BRAND accent. Insight tile. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-purple-950: #1e0f46; /* Purple — BRAND accent. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-green-50: #eefff7; /* Green — success / healthy. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-green-100: #d8ffef; /* Green — success / healthy. Success alert bg. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-green-200: #b4fede; /* Green — success / healthy. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-green-300: #7afbc6; /* Green — success / healthy. SUCCESS tag. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-green-400: #39efa3; /* Green — success / healthy. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-green-500: #0bdb86; /* Green — success / healthy. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-green-600: #06b36c; /* Green — success / healthy. Healthy / success. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-green-700: #098c57; /* Green — success / healthy. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-green-800: #0d6e47; /* Green — success / healthy. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-green-900: #0c5a3c; /* Green — success / healthy. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-green-950: #013320; /* Green — success / healthy. Tag & alert ink and the Health tile. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-yellow-50: #fefce8; /* Yellow — warning / in-progress / degraded. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-yellow-100: #fefbd8; /* Yellow — warning / in-progress / degraded. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-yellow-200: #fff7ad; /* Yellow — warning / in-progress / degraded. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-yellow-300: #ffee7a; /* Yellow — warning / in-progress / degraded. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-yellow-400: #ffe043; /* Yellow — warning / in-progress / degraded. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-yellow-500: #ffcc14; /* Yellow — warning / in-progress / degraded. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-yellow-600: #ebaf03; /* Yellow — warning / in-progress / degraded. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-yellow-700: #c98600; /* Yellow — warning / in-progress / degraded. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-yellow-800: #9e5e04; /* Yellow — warning / in-progress / degraded. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-yellow-900: #824a10; /* Yellow — warning / in-progress / degraded. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-yellow-950: #613510; /* Yellow — warning / in-progress / degraded. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-red-50: #fff1f1; /* Red — destructive / error / critical. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-red-100: #ffdfe0; /* Red — destructive / error / critical. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-red-200: #ffc5c6; /* Red — destructive / error / critical. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-red-300: #ff9d9f; /* Red — destructive / error / critical. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-red-400: #ff6466; /* Red — destructive / error / critical. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-red-500: #ff3337; /* Red — destructive / error / critical. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-red-600: #ed1518; /* Red — destructive / error / critical. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-red-700: #c80d10; /* Red — destructive / error / critical. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-red-800: #a50f11; /* Red — destructive / error / critical. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-red-900: #881416; /* Red — destructive / error / critical. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-red-950: #4b0909; /* Red — destructive / error / critical. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-blue-50: #f0f8ff; /* Blue — info / neutral status. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-blue-100: #dbedff; /* Blue — info / neutral status. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-blue-200: #b8dbff; /* Blue — info / neutral status. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-blue-300: #8cc0ff; /* Blue — info / neutral status. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-blue-400: #3d94ff; /* Blue — info / neutral status. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-blue-500: #1c77ff; /* Blue — info / neutral status. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-blue-600: #1260e5; /* Blue — info / neutral status. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-blue-700: #0b45e2; /* Blue — info / neutral status. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-blue-800: #052bb2; /* Blue — info / neutral status. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-blue-900: #042085; /* Blue — info / neutral status. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-blue-950: #031761; /* Blue — info / neutral status. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-pink-50: #fef4ff; /* Pink — chart accent. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-pink-100: #fce8ff; /* Pink — chart accent. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-pink-200: #fbd0fe; /* Pink — chart accent. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-pink-300: #fbabfc; /* Pink — chart accent. Tools glyph. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-pink-400: #f971f9; /* Pink — chart accent. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-pink-500: #ef46ef; /* Pink — chart accent. Chart accent. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-pink-600: #d327cf; /* Pink — chart accent. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-pink-700: #af1ca8; /* Pink — chart accent. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-pink-800: #8f1988; /* Pink — chart accent. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-pink-900: #751a6e; /* Pink — chart accent. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-pink-950: #4e0448; /* Pink — chart accent. Tools tile. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-cyan-50: #effaff; /* Cyan — Health space accent / chart accent. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-cyan-100: #dff4ff; /* Cyan — Health space accent / chart accent. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-cyan-200: #b8ecff; /* Cyan — Health space accent / chart accent. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-cyan-300: #85e2ff; /* Cyan — Health space accent / chart accent. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-cyan-400: #56d8ff; /* Cyan — Health space accent / chart accent. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-cyan-500: #1cc6fa; /* Cyan — Health space accent / chart accent. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-cyan-600: #00a8db; /* Cyan — Health space accent / chart accent. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-cyan-700: #0078a7; /* Cyan — Health space accent / chart accent. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-cyan-800: #02648a; /* Cyan — Health space accent / chart accent. Primitive: reference through the semantic roles, never directly in UI. */
+  --w-cyan-900: #085372; /* Cyan — Health space accent / chart accent. Primitive: reference through the semantic roles, never directly in UI. */
+  --background: var(--w-white); /* Page background (white). Grounds foreground, muted-foreground and link. */
+  --foreground: var(--w-slate-950); /* Strong text (#0F1D2A) on background, surface, card and brand-subtle. */
+  --card: var(--w-white); /* Card fill (white). */
+  --card-foreground: var(--w-slate-950); /* Text on card. */
+  --popover: var(--w-white); /* Popover / dropdown fill. */
+  --popover-foreground: var(--w-slate-950); /* Text on popover. */
+  --surface: var(--w-slate-50); /* Cards / sidebars / secondary fills (#F8FAFC). */
+  --surface-muted: var(--w-slate-100); /* Hover / table header fill (#F1F5F9). muted-foreground on it is 4.33:1 — below 4.5:1 for small text; kept as in the source. */
+  --primary: var(--w-slate-950); /* Default CTA fill — dark slate (#0F1D2A), NOT purple: "Add", "Publish", "Open in Core". */
+  --primary-foreground: var(--w-slate-50); /* Text and icons on primary. */
+  --primary-hover: var(--w-slate-900); /* Primary button hover (one step darker fill: #1E2D3B). */
+  --secondary: var(--w-white); /* Secondary button fill (white + slate border). */
+  --secondary-foreground: var(--w-slate-800); /* Text on secondary buttons. */
+  --secondary-hover: var(--w-slate-50); /* Secondary button hover. */
+  --muted: var(--w-slate-100); /* Muted fill. */
+  --muted-foreground: var(--w-slate-600); /* Labels, captions, secondary text (#637587) on background and surface. */
+  --accent: var(--w-slate-100); /* Subtle hover background (ghost buttons). */
+  --accent-foreground: var(--w-slate-950); /* Text on accent. */
+  --brand: var(--w-purple-500); /* Brand purple (#713DFF) — active nav, links, highlights, selection. NOT buttons. */
+  --brand-hover: var(--w-purple-400); /* Brand hover (#8B61FF). */
+  --brand-subtle: var(--w-purple-100); /* Selected / tinted background (#DACCFF): selected rows and active sidebar items. */
+  --brand-foreground: var(--w-white); /* Text and icons on brand. */
+  --success: var(--w-green-600); /* Status / semantic signal — success (#06B36C): healthy dots and fills, not text. */
+  --success-strong: var(--w-green-700); /* Stronger success. */
+  --success-subtle: var(--w-green-100); /* Success tint background (#D8FFEF). */
+  --success-foreground: var(--w-green-950); /* Success ink on success-subtle. */
+  --warning: var(--w-yellow-500); /* Warning (#FFCC14): dots and fills, not text. */
+  --warning-strong: var(--w-yellow-700); /* Stronger warning. */
+  --warning-subtle: var(--w-yellow-100); /* Warning tint background. */
+  --warning-foreground: var(--w-yellow-950); /* Warning ink on warning-subtle. */
+  --destructive: var(--w-red-500); /* Destructive (#FF3337) — irreversible actions only. */
+  --destructive-strong: var(--w-red-700); /* Stronger destructive. */
+  --destructive-subtle: var(--w-red-100); /* Destructive tint background. */
+  --destructive-foreground: var(--w-white); /* Text on destructive buttons. White on destructive is 3.63:1 — below 4.5:1 for 14px text; kept as in the source. */
+  --destructive-subtle-foreground: var(--w-red-950); /* Destructive ink on destructive-subtle. */
+  --info: var(--w-blue-500); /* Info (#1C77FF). */
+  --info-subtle: var(--w-blue-100); /* Info tint background. */
+  --info-foreground: var(--w-blue-950); /* Info ink on info-subtle. */
+  --border: var(--w-slate-200); /* 1px borders everywhere (#E2E9F0) — dividers, inputs, cards, pane separators. 1.22:1 on background; kept as in the source. */
+  --border-strong: var(--w-slate-300); /* Hover / darkened borders. */
+  --input: var(--w-slate-200); /* Input borders (1.22:1 on background; kept as in the source). */
+  --ring: var(--w-slate-500); /* Focus ring. */
+  --ring-brand: var(--w-purple-400); /* Brand focus ring. */
+  --sidebar: var(--w-white); /* Sidebar — nav background is ALWAYS white. */
+  --sidebar-foreground: var(--w-slate-950); /* Text on sidebar. */
+  --sidebar-primary: var(--w-slate-950); /* Sidebar primary fill. */
+  --sidebar-primary-foreground: var(--w-slate-50); /* Text on sidebar-primary. */
+  --sidebar-accent: var(--w-natural-100); /* #F5F5F5 = Figma base/secondary — selected / hover row. */
+  --sidebar-hover: var(--w-natural-50); /* #FAFAFA — half of sidebar-accent, hovered row. */
+  --sidebar-accent-foreground: var(--w-slate-950); /* Text on sidebar-accent. */
+  --sidebar-muted-foreground: var(--muted-foreground); /* Group labels + collapsed dash. */
+  --sidebar-border: var(--w-slate-200); /* Sidebar border. */
+  --sidebar-ring: var(--w-slate-500); /* Sidebar focus ring. */
+  --space-insight: var(--w-purple-500); /* Space accent (top-rail icons / space identity): Insight = purple. */
+  --space-core: var(--w-blue-500); /* Space accent: Core = blue. */
+  --space-health: var(--w-cyan-500); /* Space accent: Health = cyan/teal. */
+  --space-tools: var(--w-purple-400); /* Space accent: Tools = purple. */
+  --space-aether: var(--w-slate-950); /* Space accent: Aether = dark. */
+  --chart-1: var(--w-purple-400); /* Chart palette 1 (purple). */
+  --chart-2: var(--w-green-600); /* Chart palette 2 (green). */
+  --chart-3: var(--w-yellow-500); /* Chart palette 3 (yellow). */
+  --chart-4: var(--w-pink-500); /* Chart palette 4 (pink). */
+  --chart-5: var(--w-blue-500); /* Chart palette 5 (blue). */
+  --temp-cold: var(--w-purple-100); /* Temperature scale — cold/compliant (spectrums, range bars, donuts). */
+  --temp-warn: var(--w-yellow-500); /* Temperature scale — warn. */
+  --temp-high: #ff8400; /* Temperature scale — high. Orange — no w_ family; from the temperature refs. */
+  --temp-critical: var(--w-red-500); /* Temperature scale — critical. */
+  --viz-rail: var(--w-slate-100); /* Empty rail / track behind bars. */
+  --viz-rail-strong: var(--w-slate-200); /* Rail on a selected row. */
+  --shadow-0: none; /* Flat (page). */
+  --shadow-1: 0 1px 3px rgb(15 29 42 / 0.06), 0 1px 2px rgb(15 29 42 / 0.04); /* Resting: cards, rows, inputs. */
+  --shadow-2: 0 4px 12px rgb(15 29 42 / 0.10); /* Raised: dropdowns, popovers. */
+  --shadow-3: 0 8px 24px rgb(15 29 42 / 0.14); /* Floating: modals, command palette. */
+  --shadow-control: 0 1px 2px rgb(15 29 42 / 0.06), 0 1px 1px rgb(15 29 42 / 0.04); /* Filters: inputs, selects, toggle groups. */
+  --shadow-lift: -10px 0 18px -10px rgb(15 29 42 / 0.28), 10px 0 18px -10px rgb(15 29 42 / 0.28); /* Dragged table column. */
+  --ring-focus: 0 0 0 3px rgb(129 145 161 / 0.18); /* Focus halo on controls. */
+}
+:root {
+  --space-0: 0; /* Base unit: 4px. Scale: 4 8 12 16 24 32 48 64. */
+  --space-1: 4px; /* 4px step. */
+  --space-2: 8px; /* 8px step — toolbar gaps. */
+  --space-3: 12px; /* 12px step. */
+  --space-4: 16px; /* 16px step — card padding. */
+  --space-5: 24px; /* 24px step — page padding. */
+  --space-6: 32px; /* 32px step. */
+  --space-7: 48px; /* 48px step. */
+  --space-8: 64px; /* 64px step. */
+  --radius-xs: 4px; /* Badges, tags, dots backgrounds. Nested: child <= parent (card 8 -> button 6 -> badge 4). */
+  --radius-sm: 6px; /* Buttons, inputs, chips. */
+  --radius-md: 8px; /* Cards, blocks, panels. */
+  --radius-lg: 12px; /* Modals, popovers, large surfaces. */
+  --radius-xl: 16px; /* Extra-large surfaces. */
+  --radius-pill: 999px; /* Status badges, pills. */
+  --page-pad-x: 24px; /* Page padding. */
+  --panel-pad: 20px; /* Panel padding. */
+  --card-pad: 16px; /* Card padding. */
+  --rail-width: 72px; /* Top-level space rail. */
+  --sidebar-width: 220px; /* Expanded sidebar. */
+  --sidebar-icon-width: 56px; /* Collapsed sidebar. */
+  --spacesbar-height: 56px; /* Spaces bar height. */
+  --row-height: 44px; /* Comfortable rows. */
+  --row-height-compact: 36px; /* Compact / power-user rows. */
+  --control-height: 36px; /* Buttons, inputs. */
+  --control-height-sm: 28px; /* Small controls. */
+  --text-display: 40px; /* Page titles, hero metrics. */
+  --text-h1: 24px; /* Panel headers, section titles. */
+  --text-h2: 18px; /* Card titles, group headers. */
+  --text-body-lg: 16px; /* Large body. */
+  --text-body: 14px; /* Default UI text. */
+  --text-caption: 12px; /* Labels, timestamps, meta. */
+  --text-micro: 11px; /* Table column headers (uppercase). */
+  --weight-thin: 100; /* Thin. */
+  --weight-light: 300; /* Light. */
+  --weight-regular: 400; /* Regular. */
+  --weight-medium: 500; /* Medium — headings and display. */
+  --weight-strong: 600; /* Falls back to Medium metrics. */
+  --leading-tight: 1.2; /* Headings. */
+  --leading-snug: 1.35; /* Snug. */
+  --leading-normal: 1.5; /* Body. */
+  --tracking-display: -0.02em; /* Large headlines. */
+  --tracking-tight: -0.01em; /* Tight. */
+  --tracking-normal: 0; /* Normal. */
+  --tracking-label: 0.01em; /* Small captions/labels. */
+  --tracking-caps: 0.06em; /* Uppercase table headers. */
+  --w-slate-950-rgb: 15 29 42; /* RGB channels of the slate primitive — ONLY for alpha (shadows, focus rings): rgb(var(--w-slate-950-rgb) / .06). */
+  --w-slate-500-rgb: 129 145 161; /* RGB channels of the slate primitive — ONLY for alpha (shadows, focus rings): rgb(var(--w-slate-500-rgb) / .06). */
+  --font-sans: "GT America", "Inter", system-ui, -apple-system, sans-serif;
+  --font-heading: "GT Eesti Display", "GT America", system-ui, sans-serif;
+  --font-data: "GT Pressura", ui-monospace, "SF Mono", Menlo, monospace;
+  --font-mono: ui-monospace, "GT Pressura", "SF Mono", Menlo, monospace;
+  --font-deck-display: "GT Planar", "GT America", system-ui, sans-serif;
+  --text-w-display: 500 40px/1.2 var(--font-heading); /* Page titles, hero metrics. */
+  --text-w-h1: 500 24px/1.2 var(--font-heading); /* Panel headers, section titles. */
+  --text-w-h2: 500 18px/1.35 var(--font-heading); /* Card titles, group headers. */
+  --text-w-body: 400 14px/1.5 var(--font-sans); /* Default UI text. */
+  --text-w-body-strong: 500 14px/1.5 var(--font-sans); /* Emphasised UI text. */
+  --text-w-caption: 400 12px/1.4 var(--font-sans); /* Labels, timestamps, meta. */
+  --text-w-overline: 500 11px/1.4 var(--font-sans); /* Uppercase overline labels and table column headers. */
+}
+.w-display {
+  font-family: var(--font-heading);
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+.w-h1 {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+.w-h2 {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  line-height: 1.35;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+.w-body {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.w-body-strong {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+.w-caption {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  line-height: 1.4;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+.w-overline {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  line-height: 1.4;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+}
+@font-face {
+  font-family: "GT America";
+  src: url("assets/fonts/GT-America-Thin.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GT America";
+  src: url("assets/fonts/GT-America-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GT America";
+  src: url("assets/fonts/GT-America-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GT America";
+  src: url("assets/fonts/GT-America-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GT America";
+  src: url("assets/fonts/GT-America-Medium.otf") format("opentype");
+  font-weight: 600 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GT Eesti Display";
+  src: url("assets/fonts/GT-Eesti-Display-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GT Eesti Display";
+  src: url("assets/fonts/GT-Eesti-Display-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GT Eesti Display";
+  src: url("assets/fonts/GT-Eesti-Display-Medium.otf") format("opentype");
+  font-weight: 600 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GT Pressura";
+  src: url("assets/fonts/GT-Pressura-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GT Pressura";
+  src: url("assets/fonts/GT-Pressura-Medium.otf") format("opentype");
+  font-weight: 500 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GT Planar";
+  src: url("assets/fonts/GT-Planar-Thin.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GT Planar";
+  src: url("assets/fonts/GT-Planar-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GT Planar";
+  src: url("assets/fonts/GT-Planar-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GT Planar";
+  src: url("assets/fonts/GT-Planar-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GT Planar";
+  src: url("assets/fonts/GT-Planar-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GT Planar";
+  src: url("assets/fonts/GT-Planar-Black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}

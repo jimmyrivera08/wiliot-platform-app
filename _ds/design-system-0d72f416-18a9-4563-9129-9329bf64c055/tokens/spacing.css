@@ -1,0 +1,56 @@
+/* ============================================================
+   Wiliot — Spacing, radius, elevation, motion
+   Base unit: 4px. Scale: 4 8 12 16 24 32 48 64.
+   ============================================================ */
+
+:root {
+  /* Spacing scale */
+  --space-0: 0;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  /* Layout constants */
+  --page-pad-x: 24px;
+  --panel-pad: 20px;
+  --card-pad: 16px;
+  --rail-width: 72px;        /* top-level space rail */
+  --sidebar-width: 220px;    /* expanded sidebar */
+  --sidebar-icon-width: 56px;/* collapsed sidebar */
+  --spacesbar-height: 56px;
+  --row-height: 44px;        /* comfortable */
+  --row-height-compact: 36px;/* compact / power-user */
+  --control-height: 36px;    /* buttons, inputs */
+  --control-height-sm: 28px;
+
+  /* Radius — nested: child <= parent (card 8 -> button 6 -> badge 4) */
+  --radius-xs: 4px;          /* badges, tags, dots backgrounds */
+  --radius-sm: 6px;          /* buttons, inputs, chips */
+  --radius-md: 8px;          /* cards, blocks, panels */
+  --radius-lg: 12px;         /* modals, popovers, large surfaces */
+  --radius-xl: 16px;
+  --radius-pill: 999px;      /* status badges, pills */
+
+  /* Elevation — flat UI; shadows are subtle, paired w/ crisp borders.
+     0 flat · 1 resting · 2 raised · 3 floating */
+  --shadow-0: none;
+  --shadow-1: 0 1px 3px rgb(var(--w-slate-950-rgb) / 0.06), 0 1px 2px rgb(var(--w-slate-950-rgb) / 0.04);
+  --shadow-2: 0 4px 12px rgb(var(--w-slate-950-rgb) / 0.10);
+  --shadow-3: 0 8px 24px rgb(var(--w-slate-950-rgb) / 0.14);
+  --shadow-control: 0 1px 2px rgb(var(--w-slate-950-rgb) / 0.06), 0 1px 1px rgb(var(--w-slate-950-rgb) / 0.04); /* filters: inputs, selects, toggle groups */
+  --shadow-lift: -10px 0 18px -10px rgb(var(--w-slate-950-rgb) / 0.28), 10px 0 18px -10px rgb(var(--w-slate-950-rgb) / 0.28); /* dragged table column */
+  --ring-focus: 0 0 0 3px rgb(var(--w-slate-500-rgb) / 0.18); /* focus halo on controls */
+  --border-hairline: 1px solid rgb(var(--w-slate-950-rgb) / 0.08); /* @kind other */
+
+  /* Motion — animate ONLY transform & opacity. Never transition: all. */
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1); /* @kind other */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1); /* @kind other */
+  --dur-fast: 120ms; /* @kind other */
+  --dur-base: 180ms; /* @kind other */
+  --dur-slow: 260ms; /* @kind other */
+}

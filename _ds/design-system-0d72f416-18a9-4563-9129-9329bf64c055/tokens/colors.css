@@ -1,0 +1,252 @@
+/* ============================================================
+   Wiliot — Color tokens
+   Two layers: w_* primitives (never reference directly in UI)
+   and Shadcn-style semantic roles (use these).
+   ============================================================ */
+
+:root {
+  /* ---------- PRIMITIVES (w_ palette) ---------- */
+  --w-white: #FFFFFF;
+
+  /* Slate — primary neutral (cool, used for surfaces & text) */
+  --w-slate-50:  #F8FAFC;
+  --w-slate-100: #F1F5F9;
+  --w-slate-200: #E2E9F0;
+  --w-slate-300: #CBD6E1;
+  --w-slate-400: #ABBCCC;
+  --w-slate-500: #8191A1;
+  --w-slate-600: #637587;
+  --w-slate-700: #475869;
+  --w-slate-800: #334455;
+  --w-slate-900: #1E2D3B;
+  --w-slate-950: #0F1D2A;
+  --w-slate-1000:#020617;
+  /* RGB channels of slate primitives — ONLY for alpha (shadows, focus rings): rgb(var(--w-slate-950-rgb) / .06) */
+  --w-slate-950-rgb: 15 29 42; /* @kind other */
+  --w-slate-500-rgb: 129 145 161; /* @kind other */
+
+  /* Natural — true-gray neutral (dark surfaces) */
+  --w-natural-50:  #FAFAFA;
+  --w-natural-100: #F5F5F5;
+  --w-natural-200: #E5E5E5;
+  --w-natural-300: #D4D4D4;
+  --w-natural-400: #A3A3A3;
+  --w-natural-500: #808080;
+  --w-natural-600: #666666;
+  --w-natural-700: #525252;
+  --w-natural-800: #404040;
+  --w-natural-900: #262626;
+  --w-natural-950: #171717;
+  --w-natural-1000:#0A0A0A;
+
+  /* Purple — BRAND accent */
+  --w-purple-50:  #EDE7FF;
+  --w-purple-100: #DACCFF;
+  --w-purple-200: #B89EFF;
+  --w-purple-300: #A180FF;
+  --w-purple-400: #8B61FF;
+  --w-purple-500: #713DFF;
+  --w-purple-600: #4B14E0;
+  --w-purple-700: #4212C5;
+  --w-purple-800: #3711A1;
+  --w-purple-900: #22076E;
+  --w-purple-950: #1E0F46;
+
+  /* Green — success / healthy */
+  --w-green-50:  #EEFFF7;
+  --w-green-100: #D8FFEF;
+  --w-green-200: #B4FEDE;
+  --w-green-300: #7AFBC6;
+  --w-green-400: #39EFA3;
+  --w-green-500: #0BDB86;
+  --w-green-600: #06B36C;
+  --w-green-700: #098C57;
+  --w-green-800: #0D6E47;
+  --w-green-900: #0C5A3C;
+  --w-green-950: #013320;
+
+  /* Yellow — warning / in-progress / degraded */
+  --w-yellow-50:  #FEFCE8;
+  --w-yellow-100: #FEFBD8;
+  --w-yellow-200: #FFF7AD;
+  --w-yellow-300: #FFEE7A;
+  --w-yellow-400: #FFE043;
+  --w-yellow-500: #FFCC14;
+  --w-yellow-600: #EBAF03;
+  --w-yellow-700: #C98600;
+  --w-yellow-800: #9E5E04;
+  --w-yellow-900: #824A10;
+  --w-yellow-950: #613510;
+
+  /* Red — destructive / error / critical */
+  --w-red-50:  #FFF1F1;
+  --w-red-100: #FFDFE0;
+  --w-red-200: #FFC5C6;
+  --w-red-300: #FF9D9F;
+  --w-red-400: #FF6466;
+  --w-red-500: #FF3337;
+  --w-red-600: #ED1518;
+  --w-red-700: #C80D10;
+  --w-red-800: #A50F11;
+  --w-red-900: #881416;
+  --w-red-950: #4B0909;
+
+  /* Blue — info / neutral status */
+  --w-blue-50:  #F0F8FF;
+  --w-blue-100: #DBEDFF;
+  --w-blue-200: #B8DBFF;
+  --w-blue-300: #8CC0FF;
+  --w-blue-400: #3D94FF;
+  --w-blue-500: #1C77FF;
+  --w-blue-600: #1260E5;
+  --w-blue-700: #0B45E2;
+  --w-blue-800: #052BB2;
+  --w-blue-900: #042085;
+  --w-blue-950: #031761;
+
+  /* Pink — chart accent */
+  --w-pink-50:  #FEF4FF;
+  --w-pink-100: #FCE8FF;
+  --w-pink-200: #FBD0FE;
+  --w-pink-300: #FBABFC;
+  --w-pink-400: #F971F9;
+  --w-pink-500: #EF46EF;
+  --w-pink-600: #D327CF;
+  --w-pink-700: #AF1CA8;
+  --w-pink-800: #8F1988;
+  --w-pink-900: #751A6E;
+  --w-pink-950: #4E0448;
+
+  /* Cyan — Health space accent / chart accent */
+  --w-cyan-50:  #EFFAFF;
+  --w-cyan-100: #DFF4FF;
+  --w-cyan-200: #B8ECFF;
+  --w-cyan-300: #85E2FF;
+  --w-cyan-400: #56D8FF;
+  --w-cyan-500: #1CC6FA;
+  --w-cyan-600: #00A8DB;
+  --w-cyan-700: #0078A7;
+  --w-cyan-800: #02648A;
+  --w-cyan-900: #085372;
+
+  /* ============================================================
+     SEMANTIC ROLES (light theme) — Shadcn-shaped. Use these.
+     ============================================================ */
+  --background: var(--w-white);
+  --foreground: var(--w-slate-950);          /* #0F1D2A strong text */
+
+  --card: var(--w-white);
+  --card-foreground: var(--w-slate-950);
+
+  --popover: var(--w-white);
+  --popover-foreground: var(--w-slate-950);
+
+  --surface: var(--w-slate-50);              /* #F8FAFC cards/sidebars/secondary fills */
+  --surface-muted: var(--w-slate-100);       /* #F1F5F9 hover / table header */
+
+  --primary: var(--w-slate-950);             /* #0F1D2A — default CTA fill (NOT purple) */
+  --primary-foreground: var(--w-slate-50);
+  --primary-hover: var(--w-slate-900);       /* #1E2D3B */
+
+  --secondary: var(--w-white);               /* secondary button fill */
+  --secondary-foreground: var(--w-slate-800);
+  --secondary-hover: var(--w-slate-50);
+
+  --muted: var(--w-slate-100);
+  --muted-foreground: var(--w-slate-600);    /* #637587 labels/captions/secondary */
+
+  --accent: var(--w-slate-100);              /* subtle hover bg */
+  --accent-foreground: var(--w-slate-950);
+
+  /* Brand — purple. Active nav, links, highlights, selection. NOT buttons. */
+  --brand: var(--w-purple-500);              /* #713DFF */
+  --brand-hover: var(--w-purple-400);        /* #8B61FF */
+  --brand-subtle: var(--w-purple-100);       /* #DACCFF selected/tinted bg */
+  --brand-foreground: var(--w-white);
+  --link: var(--w-purple-500);
+
+  /* Status / semantic signal */
+  --success: var(--w-green-600);             /* #06B36C */
+  --success-strong: var(--w-green-700);
+  --success-subtle: var(--w-green-100);      /* #D8FFEF */
+  --success-foreground: var(--w-green-950);
+
+  --warning: var(--w-yellow-500);            /* #FFCC14 */
+  --warning-strong: var(--w-yellow-700);
+  --warning-subtle: var(--w-yellow-100);
+  --warning-foreground: var(--w-yellow-950);
+
+  --destructive: var(--w-red-500);           /* #FF3337 */
+  --destructive-strong: var(--w-red-700);
+  --destructive-subtle: var(--w-red-100);     /* #FFF1F1 */
+  --destructive-foreground: var(--w-white);
+  --destructive-subtle-foreground: var(--w-red-950);
+
+  --info: var(--w-blue-500);                 /* #1C77FF */
+  --info-subtle: var(--w-blue-100);
+  --info-foreground: var(--w-blue-950);
+
+  --border: var(--w-slate-200);              /* #E2E9F0 */
+  --border-strong: var(--w-slate-300);
+  --input: var(--w-slate-200);
+  --ring: var(--w-slate-500);                /* focus ring */
+  --ring-brand: var(--w-purple-400);
+
+  /* Sidebar — nav background is ALWAYS white */
+  --sidebar: var(--w-white);
+  --sidebar-foreground: var(--w-slate-950);
+  --sidebar-primary: var(--w-slate-950);
+  --sidebar-primary-foreground: var(--w-slate-50);
+  --sidebar-accent: var(--w-natural-100);    /* #F5F5F5 = Figma base/secondary — selected / hover row */
+  --sidebar-hover: var(--w-natural-50);      /* #FAFAFA — half of sidebar-accent, hovered row */
+  --sidebar-accent-foreground: var(--w-slate-950);
+  --sidebar-muted-foreground: var(--muted-foreground); /* group labels + collapsed dash */
+  --sidebar-border: var(--w-slate-200);
+  --sidebar-ring: var(--w-slate-500);
+
+  /* Space accent colors (top-rail icons / space identity) */
+  --space-insight: var(--w-purple-500);      /* Insight = purple */
+  --space-core: var(--w-blue-500);           /* Core = blue */
+  --space-health: var(--w-cyan-500);         /* Health = cyan/teal */
+  --space-tools: var(--w-purple-400);        /* Tools = purple */
+  --space-aether: var(--w-slate-950);        /* Aether = dark */
+
+  /* Charts */
+  --chart-1: var(--w-purple-400);
+  --chart-2: var(--w-green-600);
+  --chart-3: var(--w-yellow-500);
+  --chart-4: var(--w-pink-500);
+  --chart-5: var(--w-blue-500);
+
+  /* ---------- DARK SURFACES (Health / deep monitoring panels) ----------
+     Scope: apply class .w-dark on a container to flip to deep-navy surfaces. */
+}
+
+/* Deep navy depth surfaces — used on Health monitoring & immersive panels. */
+.w-dark {
+  --background: var(--w-slate-950);          /* #0F1D2A deep bg */
+  --foreground: var(--w-slate-100);
+  --card: var(--w-slate-900);                /* #1E2D3B elevated dark card */
+  --card-foreground: var(--w-slate-100);
+  --surface: var(--w-slate-900);
+  --surface-muted: var(--w-slate-800);
+  --muted-foreground: var(--w-slate-400);
+  --border: var(--w-slate-800);              /* #334455 dark border */
+  --border-strong: var(--w-slate-700);
+  --primary: var(--w-white);
+  --primary-foreground: var(--w-slate-950);
+  --secondary: var(--w-slate-800);
+  --secondary-foreground: var(--w-slate-100);
+  --accent: var(--w-slate-800);
+  --accent-foreground: var(--w-white);
+  --sidebar: var(--w-slate-950);
+  --sidebar-foreground: var(--w-slate-100);
+  --sidebar-primary: var(--w-white);
+  --sidebar-primary-foreground: var(--w-slate-950);
+  --sidebar-accent: var(--w-slate-800);
+  --sidebar-hover: var(--w-slate-900);
+  --sidebar-accent-foreground: var(--w-white);
+  --sidebar-muted-foreground: var(--muted-foreground);
+  --sidebar-border: var(--w-slate-800);
+  --sidebar-ring: var(--w-slate-400);
+}

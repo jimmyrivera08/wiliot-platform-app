@@ -1,0 +1,131 @@
+/* ============================================================
+   Wiliot Design System — component stylesheet (loaded after tokens.css).
+   Values that live in tokens.json are declared by tokens.css; what stays here
+   is what tokens.json cannot hold: the .w-dark scope, motion, hairline,
+   numeric, the non-token parts of the type utilities, and the base reset.
+   ============================================================ */
+
+:root {
+  --border-hairline: 1px solid rgb(var(--w-slate-950-rgb) / 0.08);
+
+  /* Motion — animate ONLY transform & opacity. Never transition: all. */
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 120ms;
+  --dur-base: 180ms;
+  --dur-slow: 260ms;
+
+  /* Numeric — apply on all comparable figures */
+  --numeric: tabular-nums;
+}
+
+/* Deep navy depth surfaces — used on Health monitoring & immersive panels. */
+.w-dark {
+  --background: var(--w-slate-950);          /* #0F1D2A deep bg */
+  --foreground: var(--w-slate-100);
+  --card: var(--w-slate-900);                /* #1E2D3B elevated dark card */
+  --card-foreground: var(--w-slate-100);
+  --surface: var(--w-slate-900);
+  --surface-muted: var(--w-slate-800);
+  --muted-foreground: var(--w-slate-400);
+  --border: var(--w-slate-800);              /* #334455 dark border */
+  --border-strong: var(--w-slate-700);
+  --primary: var(--w-white);
+  --primary-foreground: var(--w-slate-950);
+  --secondary: var(--w-slate-800);
+  --secondary-foreground: var(--w-slate-100);
+  --accent: var(--w-slate-800);
+  --accent-foreground: var(--w-white);
+  --sidebar: var(--w-slate-950);
+  --sidebar-foreground: var(--w-slate-100);
+  --sidebar-primary: var(--w-white);
+  --sidebar-primary-foreground: var(--w-slate-950);
+  --sidebar-accent: var(--w-slate-800);
+  --sidebar-hover: var(--w-slate-900);
+  --sidebar-accent-foreground: var(--w-white);
+  --sidebar-muted-foreground: var(--muted-foreground);
+  --sidebar-border: var(--w-slate-800);
+  --sidebar-ring: var(--w-slate-400);
+}
+
+/* ---- Type utilities: the parts tokens.json does not hold ---- */
+.w-display, .w-h1, .w-h2, .w-body { color: var(--foreground); }
+.w-caption { color: var(--muted-foreground); }
+.w-overline { text-transform: uppercase; color: var(--muted-foreground); }
+.w-data {
+  font-family: var(--font-data);
+  font-variant-numeric: var(--numeric);
+  letter-spacing: var(--tracking-normal);
+}
+
+/* Deck headline — GT Planar. Slides only, never product UI. */
+.w-deck-display {
+  font-family: var(--font-deck-display);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-display);
+  color: var(--foreground);
+}
+
+/* ============================================================
+   Wiliot — Base reset & document defaults
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  line-height: var(--leading-normal);
+  color: var(--foreground);
+  background: var(--background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  margin: 0;
+  color: var(--foreground);
+}
+
+p { margin: 0; }
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+a:hover { color: var(--brand-hover); }
+
+button { font-family: inherit; }
+
+/* Tabular numerics for all data/measurement contexts */
+.tabular, [data-tabular] { font-variant-numeric: tabular-nums; }
+
+/* Custom scrollbars — thin, unobtrusive (platform density) */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--w-slate-300) transparent;
+}
+*::-webkit-scrollbar { width: 10px; height: 10px; }
+*::-webkit-scrollbar-thumb {
+  background: var(--w-slate-300);
+  border-radius: 999px;
+  border: 3px solid transparent;
+  background-clip: padding-box;
+}
+*::-webkit-scrollbar-thumb:hover { background: var(--w-slate-400); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,116 @@
+/* ============================================================
+   Wiliot — Typography tokens
+   font-sans:    GT America        (UI / body)
+   font-heading: GT Eesti Display  (titles / display)
+   font-data:    GT Pressura       (numbers, IDs, technical values)
+   ============================================================ */
+
+:root {
+  /* Families */
+  --font-sans: "GT America", "Inter", system-ui, -apple-system, sans-serif;
+  --font-heading: "GT Eesti Display", "GT America", system-ui, sans-serif;
+  --font-data: "GT Pressura", ui-monospace, "SF Mono", Menlo, monospace;
+  --font-mono: ui-monospace, "GT Pressura", "SF Mono", Menlo, monospace;
+
+  /* DECKS ONLY — slide headlines, mostly Regular (400).
+     Never use in product UI; --font-heading (GT Eesti) is never used in decks. */
+  --font-deck-display: "GT Planar", "GT America", system-ui, sans-serif;
+
+  /* Type scale (px) — platform UI density */
+  --text-display: 40px;   /* page titles, hero metrics */
+  --text-h1: 24px;        /* panel headers, section titles */
+  --text-h2: 18px;        /* card titles, group headers */
+  --text-body-lg: 16px;
+  --text-body: 14px;      /* default UI text */
+  --text-caption: 12px;   /* labels, timestamps, meta */
+  --text-micro: 11px;     /* table column headers (uppercase) */
+
+  /* Weights (max provided weight is Medium/500 for display) */
+  --weight-thin: 100;
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-strong: 600;   /* falls back to Medium metrics */
+
+  /* Line heights */
+  --leading-tight: 1.2;   /* headings */
+  --leading-snug: 1.35;
+  --leading-normal: 1.5;  /* body */
+
+  /* Letter spacing */
+  --tracking-display: -0.02em;  /* large headlines */
+  --tracking-tight: -0.01em;
+  --tracking-normal: 0;
+  --tracking-label: 0.01em;     /* small captions/labels */
+  --tracking-caps: 0.06em;      /* uppercase table headers */
+
+  /* Numeric — apply on all comparable figures */
+  --numeric: tabular-nums; /* @kind other */
+}
+
+/* ---- Optional utility classes (consumers may use directly) ---- */
+.w-display {
+  font-family: var(--font-heading);
+  font-size: var(--text-display);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-display);
+  color: var(--foreground);
+}
+.w-h1 {
+  font-family: var(--font-heading);
+  font-size: var(--text-h1);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--foreground);
+}
+.w-h2 {
+  font-family: var(--font-heading);
+  font-size: var(--text-h2);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-snug);
+  color: var(--foreground);
+}
+.w-body {
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-normal);
+  color: var(--foreground);
+}
+.w-body-strong {
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-normal);
+}
+.w-caption {
+  font-family: var(--font-sans);
+  font-size: var(--text-caption);
+  font-weight: var(--weight-regular);
+  letter-spacing: var(--tracking-label);
+  color: var(--muted-foreground);
+}
+.w-overline {
+  font-family: var(--font-sans);
+  font-size: var(--text-micro);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+}
+.w-data {
+  font-family: var(--font-data);
+  font-variant-numeric: var(--numeric);
+  letter-spacing: var(--tracking-normal);
+}
+
+/* Deck headline — GT Planar. Slides only, never product UI. */
+.w-deck-display {
+  font-family: var(--font-deck-display);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-display);
+  color: var(--foreground);
+}
