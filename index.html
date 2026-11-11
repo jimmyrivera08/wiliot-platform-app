@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
-<head><script>/* Wiliot platform prototype — show only the app window + caption row, controlled from the parent page */
+<head><script>/* Wiliot platform prototype — show ONLY the app window, scaled to exactly fill the frame,
+   so it sits pixel-perfect on top of the still image in Webflow. Controlled from the parent page. */
 (function () {
-  var done = false;
+  var DESIGN_W = 1060;                 // the app window's width in the design
+  var done = false, win = null;
+
   function ensureBoot() {
     if (document.getElementById('pp-boot') || !document.head) return;
     var s = document.createElement('style'); s.id = 'pp-boot';
-    s.textContent = 'html{background:#F5F5F5!important}body{visibility:hidden!important}';
+    s.textContent = 'html{background:transparent!important}body{visibility:hidden!important}';
     document.head.appendChild(s);
   }
   ensureBoot();
@@ -14,34 +17,57 @@
   bootObs.observe(document, { childList: true, subtree: true });
 
   function post(msg) { try { window.parent.postMessage(Object.assign({ wiliotProto: true }, msg), '*'); } catch (e) {} }
+  function playBtn() {
+    var s = document.querySelector('#product'); if (!s) return null;
+    return [].slice.call(s.querySelectorAll('button')).find(function (b) { return /^\W*(play|pause)\W*$/i.test(b.textContent.replace(/[▶❚\s]+/g, ' ').trim()) || /play|pause/i.test(b.textContent); }) || null;
+  }
+  function playing() { var b = playBtn(); return !!b && /pause/i.test(b.textContent); }
 
-  function findBlock() {
+  function findWindow() {
     var s = document.querySelector('#product'); if (!s || !s.querySelector('.leaflet-container')) return null;
+    // the window frame = the SMALLEST tall box that still contains the "APP.WILIOT.COM" bar
     var c = [].slice.call(s.querySelectorAll('div')).filter(function (d) {
-      return /APP\.WILIOT\.COM/i.test(d.textContent) && /LIVE PROTOTYPE/i.test(d.textContent);
+      var r = d.getBoundingClientRect();
+      return /APP\.WILIOT\.COM/i.test(d.textContent) && d.querySelector('.leaflet-container') && r.width > 500 && r.height > 300;
     });
-    c.sort(function (a, b) { return a.getBoundingClientRect().height * a.getBoundingClientRect().width - b.getBoundingClientRect().height * b.getBoundingClientRect().width; });
+    c.sort(function (a, b) { var ra = a.getBoundingClientRect(), rb = b.getBoundingClientRect(); return ra.width * ra.height - rb.width * rb.height; });
     return c[0] || null;
   }
 
+  function fit() {
+    if (!win) return;
+    var k = window.innerWidth / DESIGN_W;
+    win.style.transform = 'scale(' + k + ')';
+  }
+
   function setup() {
-    var block = findBlock(); if (!block) return false;
-    block.setAttribute('data-pp-keep', '');
+    win = findWindow(); if (!win) return false;
+    var h = win.getBoundingClientRect().height * (DESIGN_W / win.getBoundingClientRect().width);
+    win.setAttribute('data-pp-keep', '');
     var st = document.createElement('style');
     st.textContent =
       'html,body{overflow:hidden!important;background:transparent!important;margin:0!important}' +
       'body *{visibility:hidden!important}' +
       '[data-pp-keep],[data-pp-keep] *{visibility:visible!important}' +
-      '[data-pp-keep]{position:fixed!important;top:0!important;left:0!important;right:0!important;width:auto!important;margin:0!important;padding:0 1px!important;z-index:9999!important;box-sizing:border-box!important}';
+      '[data-pp-keep]{position:fixed!important;top:0!important;left:0!important;width:' + DESIGN_W + 'px!important;height:' + Math.round(h) + 'px!important;' +
+      'margin:0!important;transform-origin:0 0!important;z-index:9999!important;box-shadow:none!important;border-radius:0!important}';
     document.head.appendChild(st);
-    // make sure the section's own scripts treat it as on screen
-    try { document.querySelector('#product').scrollIntoView(); } catch (e) {}
-    function size() { post({ type: 'size', h: Math.ceil(block.getBoundingClientRect().height) }); }
-    if ('ResizeObserver' in window) new ResizeObserver(size).observe(block);
-    window.addEventListener('resize', size);
-    size(); post({ type: 'ready' });
+    // scroll ONLY inside this page (never the visitor's page) so the section's own scripts treat it as on screen
+    try { var pr = document.querySelector('#product'); window.scrollTo(0, pr.getBoundingClientRect().top + window.scrollY); } catch (e) {}
+    fit(); window.addEventListener('resize', fit);
+    var b = playBtn();
+    if (b) new MutationObserver(function () { post({ type: 'state', playing: playing() }); }).observe(b, { childList: true, subtree: true, characterData: true });
+    setTimeout(function () { post({ type: 'ready', playing: playing() }); }, 600);   // give the map a moment to draw
     return true;
   }
+
+  // Commands from the parent page (your Webflow Pause/Play button)
+  window.addEventListener('message', function (e) {
+    var d = e.data; if (!d || !d.wiliotProto) return;
+    var b = playBtn(); if (!b) return;
+    if ((d.cmd === 'pause' && playing()) || (d.cmd === 'play' && !playing()) || d.cmd === 'toggle') b.click();
+    if (d.cmd === 'status') post({ type: 'state', playing: playing() });
+  });
 
   // Wheel: scroll lists inside the app if they can scroll; otherwise scroll the parent page
   function canScroll(el, dy) {
@@ -55,15 +81,17 @@
     return false;
   }
   window.addEventListener('wheel', function (e) {
-    if (window.parent === window || e.ctrlKey) return;            // pinch / ctrl+wheel: leave to the app
-    if (canScroll(e.target, e.deltaY)) return;                   // a list inside the app scrolls
+    if (window.parent === window || e.ctrlKey) return;
+    if (canScroll(e.target, e.deltaY)) return;
     e.preventDefault(); e.stopImmediatePropagation();
     var k = e.deltaMode === 1 ? 16 : (e.deltaMode === 2 ? window.innerHeight : 1);
     post({ type: 'wheel', dx: e.deltaX * k, dy: e.deltaY * k });
   }, { capture: true, passive: false });
 
-  var tries = 0, iv = setInterval(function () {
+  var tries = 0, seen = 0, iv = setInterval(function () {
     if (done || ++tries > 600) return clearInterval(iv);
+    if (!findWindow()) { seen = 0; return; }
+    if (++seen < 8) return;                                  // let the layout settle (~0.8s) before pinning
     if (setup()) { done = true; clearInterval(iv); bootObs.disconnect(); }
   }, 100);
 })();
